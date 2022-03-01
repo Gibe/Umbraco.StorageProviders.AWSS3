@@ -78,7 +78,7 @@ namespace Umbraco.StorageProviders.AWSS3.Imaging
         {
             if (context == null) throw new ArgumentNullException(nameof(context));
 
-            return _formatUtilities.TryGetExtensionFromUri(context.Request.GetDisplayUrl(), out _);
+            return _formatUtilities.GetExtensionFromUri(context.Request.GetDisplayUrl()) != null;
         }
 
         /// <inheritdoc />

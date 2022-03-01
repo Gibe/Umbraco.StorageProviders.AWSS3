@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,11 +6,14 @@
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.7.7.16" />
+    <PackageReference Include="SixLabors.ImageSharp.Web" Version="1.0.5" />
     <PackageReference Include="Umbraco.Cms.Web.Common" Version="9.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EquateDigital\ImageSharp.Web\src\ImageSharp.Web.Providers.AWS\ImageSharp.Web.Providers.AWS.csproj" />
+    <Reference Include="SixLabors.ImageSharp.Web.Providers.AWS">
+      <HintPath>..\..\ImageSharp.Web\artifacts\bin\src\ImageSharp.Web.Providers.AWS\Debug\netcoreapp3.1\SixLabors.ImageSharp.Web.Providers.AWS.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
